@@ -85,8 +85,10 @@
       <p>
         For each slum unit: country, census year, settlement name, municipality, household count,
         access to electricity, piped water, sewerage, land title, and polygon geometry.
-        Slum locations are linked to the nearest urban boundary and classified as
-        <em>inside city</em>, <em>fringe</em> (&lt;50 km buffer), or <em>remote</em>.
+        Slum locations are linked to the closest city and we measure normalized distances to city centers using
+        <a href="https://www.nature.com/articles/s41597-025-06368-9" target="_blank">global city boundaries data</a>
+        (Bai et al. 2026).
+        Slums are classified as <em>inside city</em>, <em>fringe</em> (&lt;50 km buffer), or <em>remote</em>.
       </p>
     </div>
   </section>
@@ -250,6 +252,13 @@
       <div class="download-btns">
         <a href="#" class="btn-download">Download .dta file (coming soon)</a>
       </div>
+
+      <h3 style="margin-top:2rem; margin-bottom:0.6rem; font-size:1rem; color:#444;">Data sources</h3>
+      <p style="font-size:0.9rem; color:#555;">
+        Bai, M., Zhang, X., Ai, W. <em>et al.</em> A high-resolution global annual city and town boundaries dataset (2000–2022) derived from GLC_FCS30D product.
+        <em>Scientific Data</em> <strong>13</strong>, 50 (2026).
+        <a href="https://doi.org/10.1038/s41597-025-06368-9" target="_blank">https://doi.org/10.1038/s41597-025-06368-9</a>
+      </p>
 
     </div>
   </section>
