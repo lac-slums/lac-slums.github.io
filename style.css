@@ -92,6 +92,13 @@ nav ul a:hover { color: #1a3a5c; }
   font-family: Arial, sans-serif;
 }
 
+.hero .affiliations {
+  font-size: 0.82rem;
+  color: #888;
+  font-family: Arial, sans-serif;
+  margin-top: 0.3rem;
+}
+
 .hero .status-badge {
   display: inline-block;
   margin-top: 1.25rem;
