@@ -332,16 +332,15 @@ footer {
   background: #fff;
 }
 
-/* Countries: two aligned rows (6 + 5) instead of a ragged wrap */
+/* Countries: two aligned columns (6 + 5), filled top to bottom */
 .countries {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 150px));
+  grid-template-rows: repeat(6, auto);
+  grid-auto-flow: column;
   gap: 0.4rem;
 }
 .country-tag { text-align: center; }
-@media (max-width: 600px) {
-  .countries { grid-template-columns: repeat(3, 1fr); }
-}
 
 /* Countries and map side by side; stack on narrow screens */
 .geo-row {
