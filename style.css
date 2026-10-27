@@ -295,7 +295,7 @@ footer {
 /* Sample map figure: small thumbnail, click to enlarge */
 .map-figure {
   margin: 1.5rem 0 0;
-  flex: 0 0 220px;
+  flex: 0 0 300px;
 }
 .map-thumb {
   display: inline-block;
@@ -303,7 +303,7 @@ footer {
 }
 .map-thumb img {
   display: block;
-  width: 220px;
+  width: 300px;
   max-width: 100%;
   height: auto;
   border: 1px solid #ddd;
@@ -345,10 +345,10 @@ footer {
 /* Countries and map side by side; stack on narrow screens */
 .geo-row {
   display: flex;
-  gap: 1.5rem;
+  gap: 2rem;
   align-items: flex-start;
 }
-.geo-countries { flex: 1 1 auto; min-width: 0; }
+.geo-countries { flex: 0 0 auto; min-width: 0; }
 .country-tag { padding: 0.2rem 0.3rem; }
 @media (max-width: 700px) {
   .geo-row { flex-direction: column; }
