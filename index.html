@@ -61,6 +61,9 @@
         <li><strong>Household-level repeated cross-section (Chile)</strong> — who lives in informal settlements, entry and exit dynamics, and resident selection.</li>
       </ul>
 
+      <!-- Countries (left) and sample map thumbnail (right) side by side -->
+      <div class="geo-row">
+      <div class="geo-countries">
       <h3 style="margin-top:1.5rem; margin-bottom:0.6rem; font-size:1rem; color:#444;">Countries covered</h3>
       <div class="countries">
         <span class="country-tag">Argentina</span>
@@ -75,16 +78,19 @@
         <span class="country-tag">Paraguay</span>
         <span class="country-tag">Uruguay</span>
       </div>
+      </div>
 
       <figure class="map-figure">
-        <a href="sample_countries.png" target="_blank">
+        <a href="sample_countries.png" class="map-thumb" target="_blank">
           <img src="sample_countries.png" alt="Map of slum locations across Latin America, shaded by data availability (panel, static national, static selected cities, not in sample)" />
         </a>
-        <figcaption>Slum locations across Latin America and data availability by country.</figcaption>
+        <figcaption>Slum locations and data availability by country. Click to enlarge.</figcaption>
       </figure>
+      </div>
 
-      <div class="download-btns" style="margin-top:1rem;">
-        <a href="sample_countries.pdf" target="_blank" class="btn-download btn-download--outline">Download map (PDF)</a>
+      <!-- Click-to-enlarge overlay for the sample map (click or Esc closes) -->
+      <div class="lightbox" id="map-lightbox" aria-hidden="true">
+        <img src="sample_countries.png" alt="Enlarged map of slum locations across Latin America" />
       </div>
 
       <h3 style="margin-top:1.5rem; margin-bottom:0.6rem; font-size:1rem; color:#444;">Key variables</h3>
@@ -309,6 +315,23 @@
       </p>
     </div>
   </footer>
+
+  <script>
+    // Sample map lightbox: thumbnail click opens the large version
+    (function () {
+      var box = document.getElementById('map-lightbox');
+      var thumb = document.querySelector('.map-thumb');
+      if (!box || !thumb) return;
+      function close() { box.classList.remove('open'); box.setAttribute('aria-hidden', 'true'); }
+      thumb.addEventListener('click', function (e) {
+        e.preventDefault();
+        box.classList.add('open');
+        box.setAttribute('aria-hidden', 'false');
+      });
+      box.addEventListener('click', close);
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
+    })();
+  </script>
 
 </body>
 </html>
